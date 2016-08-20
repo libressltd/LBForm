@@ -15,7 +15,7 @@ LIBRESSLtd\LBForm\LBFormServiceProvider::class,
 
 ### Step 3: Publish 
 
-php artisan vendor:publish
+php artisan vendor:publish --tag=lbform
 
 ### Step 4: Using:
 
