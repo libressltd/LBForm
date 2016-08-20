@@ -19,7 +19,7 @@ class LBFormServiceProvider extends ServiceProvider
 	        __DIR__.'/views' => base_path('resources/views/libressltd/lbform'),
 	    ], "lbform");
 		
-		Form::component('lbText', 'libressltd.lbform.bstext', ['name', 'value', 'title', 'place_holder']);
+		Form::component('lbText', 'libressltd.lbform.bstext', ['name', 'value', 'title', 'place_holder', 'hin']);
 		Form::component('lbNumber', 'libressltd.lbform.bsnumber', ['name', 'value', 'title', 'min', 'max']);
 		Form::component('lbTimepicker', 'libressltd.lbform.bstimepicker', ['name', 'value', 'title']);
 		Form::component('lbDatepicker', 'libressltd.lbform.bsdatepicker', ['name', 'value', 'title']);
@@ -34,7 +34,7 @@ class LBFormServiceProvider extends ServiceProvider
 		Form::component('lbRatioYesNo', 'libressltd.lbform.bsratioyesno', ['name', 'value', 'title']);
 		Form::component('lbButton', 'libressltd.lbform.bsbutton', ['url', 'method', 'title', 'attribute']);
 		Form::component('lbAlert', 'libressltd.lbform.bsalert', []);
-		Form::component('lsSubmit', 'libressltd.lbform.lbsubmit', []);
+		Form::component('lbSubmit', 'libressltd.lbform.lbsubmit', []);
     }
 
     /**
