@@ -17,5 +17,5 @@
             "LIBRESSLtd\\LBForm\\": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
