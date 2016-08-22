@@ -1,7 +1,7 @@
 <div class="form-group">
     {{ Form::label($title, null, ['class' => 'control-label']) }}
     @if (isset($hin))
-    	<small>{{ $hin }}</small>
+    	<span class="help-block">$hin</span>
     @endif
     <?php
     	$attrs = array('class' => 'form-control');
