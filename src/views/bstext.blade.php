@@ -9,6 +9,13 @@
 		{
 			$attrs['placeholder'] = $place_holder;
 		}
+		if (isset($validation))
+		{
+			if (isset($validation['required']) && $validation['required'] === TRUE)
+			{
+				$attrs['required'] = 'required';
+			}
+		}
     ?>
     {{ Form::text($name, $value, $attrs) }}
 </div>

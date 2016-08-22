@@ -19,7 +19,7 @@ class LBFormServiceProvider extends ServiceProvider
 	        __DIR__.'/views' => base_path('resources/views/libressltd/lbform'),
 	    ], "lbform");
 		
-		Form::component('lbText', 'libressltd.lbform.bstext', ['name', 'value', 'title', 'place_holder', 'hin']);
+		Form::component('lbText', 'libressltd.lbform.bstext', ['name', 'value', 'title', 'place_holder', 'hin', 'validation']);
 		Form::component('lbNumber', 'libressltd.lbform.bsnumber', ['name', 'value', 'title', 'min', 'max']);
 		Form::component('lbTimepicker', 'libressltd.lbform.bstimepicker', ['name', 'value', 'title']);
 		Form::component('lbDatepicker', 'libressltd.lbform.bsdatepicker', ['name', 'value', 'title']);
