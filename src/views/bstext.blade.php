@@ -11,10 +11,7 @@
 		}
 		if (isset($validation))
 		{
-			if (isset($validation['required']) && $validation['required'] === TRUE)
-			{
-				$attrs['required'] = 'required';
-			}
+			$attrs = array_merge_recursive($attrs, $validation);
 		}
     ?>
     {{ Form::text($name, $value, $attrs) }}
