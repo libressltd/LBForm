@@ -17,6 +17,7 @@ class LBFormServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/views', 'lbform');
 		$this->publishes([
 	        __DIR__.'/views' => base_path('resources/views/libressltd/lbform'),
+	        __DIR__.'/config' => base_path('config'),
 	    ], "lbform");
 		
 		Form::component('lbText', 'libressltd.lbform.bstext', ['name', 'value', 'title', 'place_holder', 'hin', 'validation']);
