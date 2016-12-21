@@ -16,26 +16,26 @@ class LBFormServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__.'/views', 'lbform');
 		$this->publishes([
-	        __DIR__.'/views' => base_path('resources/views/libressltd/lbform'),
+	        __DIR__.'/views' => base_path('resources/views/layouts/form'),
 	        __DIR__.'/config' => base_path('config'),
 	    ], "lbform");
 		
-		Form::component('lbText', 'libressltd.lbform.bstext', ['name', 'value', 'title', 'place_holder', 'hin', 'validation']);
-		Form::component('lbNumber', 'libressltd.lbform.bsnumber', ['name', 'value', 'title', 'min', 'max']);
-		Form::component('lbTimepicker', 'libressltd.lbform.bstimepicker', ['name', 'value', 'title']);
-		Form::component('lbDatepicker', 'libressltd.lbform.bsdatepicker', ['name', 'value', 'title']);
-		Form::component('lbDatetime', 'libressltd.lbform.bsdatetime', ['name', 'value', 'title', 'sub_class']);
-		Form::component('lbTextarea', 'libressltd.lbform.bstextarea', ['name', 'value', 'title', 'placeholder']);
-		Form::component('lbCKEditor', 'libressltd.lbform.bsckeditor', ['name', 'value', 'title']);
-		Form::component('lbCheckbox', 'libressltd.lbform.bscheckbox', ['name', 'value', 'title']);
-		Form::component('lbRatio', 'libressltd.lbform.bsratio', ['name', 'value', 'items', 'title']);
-		Form::component('lbSelect', 'libressltd.lbform.bsselect', ['name', 'value', 'items', 'title']);
-		Form::component('lbSelect2', 'libressltd.lbform.bsselect2', ['name', 'value', 'items', 'title']);
-		Form::component('lbSelect2multi', 'libressltd.lbform.bsselect2multi', ['name', 'value', 'items', 'title']);
-		Form::component('lbRatioYesNo', 'libressltd.lbform.bsratioyesno', ['name', 'value', 'title']);
-		Form::component('lbButton', 'libressltd.lbform.bsbutton', ['url', 'method', 'title', 'attribute']);
-		Form::component('lbAlert', 'libressltd.lbform.bsalert', []);
-		Form::component('lbSubmit', 'libressltd.lbform.lbsubmit', []);
+		Form::component('lbText', 'layouts.form.bstext', ['name', 'value', 'title', 'place_holder', 'hin', 'validation']);
+		Form::component('lbNumber', 'layouts.form.bsnumber', ['name', 'value', 'title', 'min', 'max']);
+		Form::component('lbTimepicker', 'layouts.form.bstimepicker', ['name', 'value', 'title']);
+		Form::component('lbDatepicker', 'layouts.form.bsdatepicker', ['name', 'value', 'title']);
+		Form::component('lbDatetime', 'layouts.form.bsdatetime', ['name', 'value', 'title', 'sub_class']);
+		Form::component('lbTextarea', 'layouts.form.bstextarea', ['name', 'value', 'title', 'placeholder']);
+		Form::component('lbCKEditor', 'layouts.form.bsckeditor', ['name', 'value', 'title']);
+		Form::component('lbCheckbox', 'layouts.form.bscheckbox', ['name', 'value', 'title']);
+		Form::component('lbRatio', 'layouts.form.bsratio', ['name', 'value', 'items', 'title']);
+		Form::component('lbSelect', 'layouts.form.bsselect', ['name', 'value', 'items', 'title']);
+		Form::component('lbSelect2', 'layouts.form.bsselect2', ['name', 'value', 'items', 'title']);
+		Form::component('lbSelect2multi', 'layouts.form.bsselect2multi', ['name', 'value', 'items', 'title']);
+		Form::component('lbRatioYesNo', 'layouts.form.bsratioyesno', ['name', 'value', 'title']);
+		Form::component('lbButton', 'layouts.form.bsbutton', ['url', 'method', 'title', 'attribute']);
+		Form::component('lbAlert', 'layouts.form.bsalert', []);
+		Form::component('lbSubmit', 'layouts.form.lbsubmit', []);
     }
 
     /**
