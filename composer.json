@@ -3,8 +3,7 @@
     "description": "Form element for reuse",
     "type": "library",
     "require": {
-        "laravelcollective/html": "*",
-        "acacha/admin-lte-template-laravel": "*"
+        "laravelcollective/html": "*"
     },
     "license": "MIT",
     "authors": [
