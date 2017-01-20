@@ -30,6 +30,7 @@ class LBFormServiceProvider extends ServiceProvider
 		Form::component('lbCheckbox', 'layouts.form.bscheckbox', ['name', 'value', 'title']);
 		Form::component('lbRatio', 'layouts.form.bsratio', ['name', 'value', 'items', 'title']);
 		Form::component('lbSelect', 'layouts.form.bsselect', ['name', 'value', 'items', 'title']);
+		Form::component('lbSelectIcon', 'layouts.form.bsselecticon', ['name', 'value', 'title']);
 		Form::component('lbSelect2', 'layouts.form.bsselect2', ['name', 'value', 'items', 'title']);
 		Form::component('lbSelect2multi', 'layouts.form.bsselect2multi', ['name', 'value', 'items', 'title']);
 		Form::component('lbRatioYesNo', 'layouts.form.bsratioyesno', ['name', 'value', 'title']);

@@ -4,7 +4,6 @@
     "type": "library",
     "require": {
         "laravelcollective/html": "*",
-        "acacha/admin-lte-template-laravel": "*"
     },
     "license": "MIT",
     "authors": [
