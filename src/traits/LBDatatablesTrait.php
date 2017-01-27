@@ -11,11 +11,14 @@ trait LBDatatableTrait {
         $total = $class::count();
         $totalFiltered = $query->count();
 
+        $columns = [];
         foreach ($request->columns as $column)
         {
             if (strlen($column["search"]["value"]) > 0)
             {
                 $data = $column["data"];
+                $columns[] = $data;
+
                 if (strpos($data, ".") === false)
                 {
                     $query = $query->where($column["data"], "like", "%".$column["search"]["value"]."%");
@@ -33,7 +36,7 @@ trait LBDatatableTrait {
             }
         }
 
-        $data = $query->offset($request->start)->limit($request->length)->get();
+        $data = $query->offset($request->start)->limit($request->length)->get($columns);
 
         return ["draw" => $request->draw, "recordsTotal" => $total, "recordsFiltered" => $totalFiltered, "data" => $data];
     }
