@@ -5,6 +5,21 @@ namespace LIBRESSLtd\LBForm\Traits;
 use Auth;
 
 trait LBDatatableTrait {
+
+    public function scopeToOption($query, $name = "name", $value = "id")
+    {
+        $items = $query->get();
+        $array = array();
+        foreach ($items as $item)
+        {
+            $array[] = [
+                "name" => $item->$name,
+                "value" => $item->$value
+            ];
+        }
+        return $array;
+    }
+
     public function scopeDatatable($query, $request)
     {
         $class = get_class($this);
