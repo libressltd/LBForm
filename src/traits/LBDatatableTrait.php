@@ -49,6 +49,16 @@ trait LBDatatableTrait {
                 }
             }
         }
+        foreach ($request->order as $order)
+        {
+            $column_index = $order["column"];
+            $column_direction = $order["dir"];
+            $data = $request->columns[$column_index]["data"];
+            if (strpos($data, ".") === false)
+            {
+                $query->orderBy($data, $column_direction);
+            }
+        }
 
         $data = $query->offset($request->start)->limit($request->length)->get();
 
