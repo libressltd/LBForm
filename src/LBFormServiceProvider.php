@@ -4,6 +4,7 @@ namespace LIBRESSLtd\LBForm;
 
 use Illuminate\Support\ServiceProvider;
 use Form;
+use Cookie;
 
 class LBFormServiceProvider extends ServiceProvider
 {
@@ -37,6 +38,12 @@ class LBFormServiceProvider extends ServiceProvider
 		Form::component('lbButton', 'layouts.form.bsbutton', ['url', 'method', 'title', 'attribute']);
 		Form::component('lbAlert', 'layouts.form.bsalert', []);
 		Form::component('lbSubmit', 'layouts.form.lbsubmit', []);
+
+        $lang = Cookie::get('locale');
+        if ($lang != null) 
+        {
+            \App::setLocale($lang);
+        }
     }
 
     /**
