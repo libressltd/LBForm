@@ -3,10 +3,11 @@
 namespace LIBRESSLtd\LBForm\Controller;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Cookie;
 use Auth;
 
-class HomeController extends Controller
+class LBFormController extends Controller
 {
     /**
      * Create a new controller instance.
