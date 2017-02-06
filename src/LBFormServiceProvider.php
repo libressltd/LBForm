@@ -46,6 +46,7 @@ class LBFormServiceProvider extends ServiceProvider
      */
     public function register()
     {
-    	
+        include __DIR__.'/routes.php';
+        $this->app->make('LIBRESSLtd\LBForm\Controllers\LBFormController');
     }
 }
