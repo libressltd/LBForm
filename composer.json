@@ -15,7 +15,8 @@
     "autoload": {
         "psr-4": {
             "LIBRESSLtd\\LBForm\\": "src/"
-        }
+        },
+        "classmap": ["src/controllers"]
     },
     "minimum-stability": "stable"
 }

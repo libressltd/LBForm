@@ -1,6 +1,6 @@
 <?php
 
-namespace LIBRESSLtd\LBForm\Controller;
+namespace LIBRESSLtd\LBForm\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
