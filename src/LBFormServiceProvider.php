@@ -2,6 +2,7 @@
 
 namespace LIBRESSLtd\LBForm;
 
+use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Support\ServiceProvider;
 use Form;
 use Cookie;
@@ -39,7 +40,13 @@ class LBFormServiceProvider extends ServiceProvider
 		Form::component('lbAlert', 'layouts.form.bsalert', []);
 		Form::component('lbSubmit', 'layouts.form.lbsubmit', []);
 
-        $lang = Crypt::decrypt(Cookie::get('locale'));
+        $lang;
+        try {
+            $lang = Crypt::decrypt(Cookie::get('locale'));
+        } catch (DecryptException $e) {
+            $lang = Cookie::get('locale');
+        }
+        
         if ($lang != null) 
         {
             \App::setLocale($lang);
