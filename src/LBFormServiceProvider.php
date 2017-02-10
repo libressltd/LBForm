@@ -39,7 +39,7 @@ class LBFormServiceProvider extends ServiceProvider
 		Form::component('lbAlert', 'layouts.form.bsalert', []);
 		Form::component('lbSubmit', 'layouts.form.lbsubmit', []);
 
-        $lang = Cookie::get('locale');
+        $lang = Crypt::decrypt(Cookie::get('locale'));
         if ($lang != null) 
         {
             \App::setLocale($lang);
