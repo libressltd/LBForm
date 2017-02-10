@@ -3,6 +3,7 @@
 namespace LIBRESSLtd\LBForm;
 
 use Illuminate\Contracts\Encryption\DecryptException;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\ServiceProvider;
 use Form;
 use Cookie;
