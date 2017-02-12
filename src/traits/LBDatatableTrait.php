@@ -12,8 +12,14 @@ trait LBDatatableTrait {
         $array = array();
         foreach ($items as $item)
         {
+            $comps = explode(".", $name);
+            $object = $item;
+            foreach ($comps as $c)
+            {
+                $object = $object->$c;
+            }
             $array[] = [
-                "name" => $item->$name,
+                "name" => $object,
                 "value" => $item->$value
             ];
         }
