@@ -6,10 +6,10 @@ use Auth;
 
 trait LBDatatableTrait {
 
-    public function scopeToOption($query, $name = "name", $value = "id")
+    public function scopeToOption($query, $name = "name", $value = "id", $additional_array = array();
     {
         $items = $query->get();
-        $array = array();
+        $array = $additional_array;
         foreach ($items as $item)
         {
             $comps = explode(".", $name);
