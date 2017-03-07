@@ -6,7 +6,7 @@ use Auth;
 
 trait LBDatatableTrait {
 
-    public function scopeToOption($query, $name = "name", $value = "id", $additional_array = array();
+    public function scopeToOption($query, $name = "name", $value = "id", $additional_array = array())
     {
         $items = $query->get();
         $array = $additional_array;
