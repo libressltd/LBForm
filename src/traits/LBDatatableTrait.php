@@ -65,8 +65,14 @@ trait LBDatatableTrait {
                 $query->orderBy($data, $column_direction);
             }
         }
-
-        $data = $query->offset($request->start)->limit($request->length)->get();
+        if ($request->length > 0)
+        {
+            $data = $query->offset($request->start)->limit($request->length)->get();
+        }
+        else
+        {
+            $data = $query->get();
+        }
 
         return ["draw" => $request->draw, "recordsTotal" => $total, "recordsFiltered" => $totalFiltered, "data" => $data];
     }
