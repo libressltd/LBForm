@@ -26,7 +26,7 @@ trait LBDatatableTrait {
         return $array;
     }
 
-    public function scopeDatatable($query, $request)
+    public function scopeDatatable($query, $request, $visibleFields = [])
     {
         $class = get_class($this);
         $total = $class::count();
@@ -67,11 +67,11 @@ trait LBDatatableTrait {
         }
         if ($request->length > 0)
         {
-            $data = $query->offset($request->start)->limit($request->length)->get();
+            $data = $query->offset($request->start)->limit($request->length)->get()->makeVisible($visibleFields)->toArray();
         }
         else
         {
-            $data = $query->get();
+            $data = $query->get()->makeVisible($visibleFields)->toArray();
         }
 
         return ["draw" => $request->draw, "recordsTotal" => $total, "recordsFiltered" => $totalFiltered, "data" => $data];

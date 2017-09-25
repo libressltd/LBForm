@@ -1,5 +1,6 @@
 <div class="form-group">
     {{ Form::label($title, null, ['class' => 'control-label']) }}
+    <input type="hidden" name="{{ $name }}" value="[]" />
 	<select class="form-control  select2" name="{{ $name }}" multiple="multiple">
     	@foreach ($items as $item)
     		<option value="{{ $item['value'] }}" 
